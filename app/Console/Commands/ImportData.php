@@ -10,9 +10,14 @@ class ImportData extends Command
     protected $signature = 'data:import';
     protected $description = 'Imports municipalities data';
 
-
-
     public function handle()
+    {
+        
+
+
+    }
+
+    private function importSubDistricts()
     {
         $url = 'https://www.e-obce.sk/kraj/NR.html';
         $html = file_get_html($url);
@@ -22,4 +27,5 @@ class ImportData extends Command
             $this->line("$text");
         }
     }
+
 }

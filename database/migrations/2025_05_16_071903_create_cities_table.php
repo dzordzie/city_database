@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('coat_of_arms_image')->nullable();
             $table->string('latitude', 25)->nullable();
             $table->string('longitude', 25)->nullable();
+            $table->string('url');
             $table->foreignId('sub_district_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
