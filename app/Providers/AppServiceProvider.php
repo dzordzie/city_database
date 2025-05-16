@@ -11,7 +11,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        include_once base_path('app/Libraries/SimpleHtmlDom/simple_html_dom.php');
     }
 
     /**
