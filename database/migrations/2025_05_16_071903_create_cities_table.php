@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('city_hall_address')->nullable();
             $table->string('phone')->nullable();
             $table->string('fax')->nullable();
-            $table->string('email')->nullable();
+            $table->text('email')->nullable();
             $table->string('web')->nullable();
             $table->string('coat_of_arms_image')->nullable();
             $table->string('latitude', 25)->nullable();

@@ -14,7 +14,12 @@ class City extends Model
         'phone',
         'fax',
         'email',
-        'web'
+        'web',
+        'coat_of_arms_image',
+        'latitude',
+        'longitude',
+        'url',
+        'sub_district_id'
     ];
 
 

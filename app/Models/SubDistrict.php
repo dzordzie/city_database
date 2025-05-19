@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class SubDistrict extends Model
 {
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'url'];
 
     public function cities(): HasMany
     {
