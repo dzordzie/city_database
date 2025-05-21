@@ -1,3 +1,6 @@
+@extends('layout.master')
+
+@section('content')
 <div>
     <h1>{{ $city->name }}</h1>
     <p>{{ $city->latitude }}</p>
@@ -10,3 +13,4 @@
     <p>{{ $city->web }}</p>
     <img src="{{ asset($city->coat_of_arms_image) }}" alt="{{ $city->name }}">
 </div>
+@endsection

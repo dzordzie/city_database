@@ -27,7 +27,7 @@ $(function () {
                             );
                         });
 
-                        $(".list-item").on("click", function () {
+                        $(".list-group-item").on("click", function () {
                             const cityId = $(this).data("id");
                             window.location.href = `/city/${cityId}`;
 
