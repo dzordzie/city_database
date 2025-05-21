@@ -3,7 +3,7 @@ import "bootstrap";
 import $ from "jquery";
 
 $(function () {
-    $('#city').on('input', function () {
+    $("#city").on("input", function () {
         let query = $(this).val().toLowerCase();
         query = removeDiacratics(query);
 
@@ -13,14 +13,26 @@ $(function () {
                 method: "GET",
                 data: { query },
                 success: function (data) {
-                    let suggestions = $('#suggestions');
+                    let suggestions = $("#suggestions");
                     suggestions.empty();
 
                     if (data.length === 0) {
-                        suggestions.append('<li class="list-item">Žiadne výsledky</li>')
+                        suggestions.append(
+                            '<li class="list-group-item">Žiadne výsledky</li>',
+                        );
                     } else {
                         data.forEach((city) => {
-                            $("#suggestions").append(`<li class="list-item">${city.name}</li>`);
+                            $("#suggestions").append(
+                                `<li class="list-group-item" data-id="${city.id}">${city.name}</li>`,
+                            );
+                        });
+
+                        $(".list-item").on("click", function () {
+                            const cityId = $(this).data("id");
+                            window.location.href = `/city/${cityId}`;
+
+                            $("#city").val("");
+                            $("#suggestions").empty();
                         });
                     }
                 },
@@ -29,20 +41,17 @@ $(function () {
             $("#suggestions").empty();
         }
     });
-
-
-    $('#suggestions').on('click', '.list-item', function () {
-        const id = $(this).data('id');
-        window.location.href = `/city/${id}`;
-    });
 });
 
-function removeDiacratics (str) {
-    const accents = 'àáâãäåòóôõöøèéêëðčďìíîïůúüñňšÿýžľĺŕřť';
+function removeDiacratics(str) {
+    const accents = "àáâãäåòóôõöøèéêëðčďìíîïůúüñňšÿýžľĺŕřť";
     const accentsOut = "aaaaaaooooooeeeeecdiiiiuuunnsyyzllrrt";
 
-    return str.split('').map(char => {
-        const index = accents.indexOf(char);
-        return index !== -1 ? accentsOut[index] : char;
-    }).join('');
+    return str
+        .split("")
+        .map((char) => {
+            const index = accents.indexOf(char);
+            return index !== -1 ? accentsOut[index] : char;
+        })
+        .join("");
 }
