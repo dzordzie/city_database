@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('cities', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('search_name')->nullable()->index();
             $table->string('mayor_name')->nullable();
             $table->string('city_hall_address')->nullable();
             $table->string('phone')->nullable();
