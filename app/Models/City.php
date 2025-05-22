@@ -24,7 +24,7 @@ class City extends Model
     ];
 
     protected $casts = [
-        'emails' => 'array',
+        'email' => 'array',
     ];
 
     protected static function booted()

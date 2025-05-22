@@ -1,0 +1,64 @@
+.section-city-detail {
+    padding: 80px 0;
+
+    .sub-heading {
+        font-size: 40px;
+    }
+
+    .row {
+        box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .content-table {
+        background-color: $lightGrey;
+        padding: 50px;
+
+        @media (max-width: 992px) {
+            padding: 30px;
+            font-size: 14px;
+        }
+
+        @media (min-width: 576px) and (max-width: 767px) {
+            padding: 20px 10px;
+            font-size: 12px;
+        }
+
+
+        &_wrapper {
+            .detail-table {
+                td {
+                    padding: 5px 10px;
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+
+    .content-additional {
+        background-color: $white;
+        padding: 50px;
+
+        @media (max-width: 992px) {
+            padding: 30px;
+        }
+
+        @media (max-width: 992px) {
+            padding: 20px;
+        }
+
+        &_info {
+            .coat-of-arms_wrapper {
+                width: 80px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .sub-district_name {
+                font-size: 45px;
+            }
+        }
+    }
+}
