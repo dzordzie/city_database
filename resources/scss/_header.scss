@@ -1,0 +1,24 @@
+.section-header {
+    background-color: $white;
+    border-bottom: 1px solid $mediumGrey;
+
+    .navbar-brand {
+        img {
+            margin-left: -15px;
+            width: 150px;
+            height: auto;
+        }
+    }
+
+    .main-nav {
+        font-weight: 600;
+    }
+
+    .form-select {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        appearance: none;
+    }
+}

@@ -1,0 +1,29 @@
+.section-footer {
+    padding: 50px 0;
+    background-color: $mediumGrey;
+
+    h6 {
+        font-size: 14px;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    li {
+        font-size: 13px;
+        margin: 3px 0;
+    }
+
+    @media (max-width: 576px) {
+        .footer_nav-wrapper {
+            width: 100%;
+            max-width: 230px;
+        }
+    }
+
+    .contact-list {
+        li {
+            font-size: 14px;
+            margin: 0;
+        }
+    }
+}

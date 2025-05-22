@@ -1,11 +1,40 @@
 @import "bootstrap/scss/bootstrap";
+@import "variables";
+@import "header";
+@import "footer";
+@import "form-section";
+@import "city-detail-section";
 
-#suggestions {
-    position: relative;
-    z-index: 10;
-    cursor: pointer;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    li:hover {
-        background-color: #f8f9fa;
+body {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: $white;
+    color: $black;
+}
+
+input {
+    border: none;
+    outline: none;
+
+    &:focus {
+        border: none;
+        outline: none;
     }
+}
+
+button {
+    all: unset;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }

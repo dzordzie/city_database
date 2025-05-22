@@ -1,0 +1,46 @@
+.section-form {
+    width: 100%;
+    height: 100%;
+    background: $blueBackground;
+    padding: 160px 0;
+
+    .heading {
+        font-size: 60px;
+        color: $white;
+        font-weight: 200;
+
+        @media (max-width: 768px) {
+            font-size: 50px;
+        }
+    }
+
+    #city {
+        width: 100%;
+        height: 40px;
+        max-width: 450px;
+        padding-left: 16px;
+        border-radius: 8px;
+
+        &::placeholder {
+            opacity: 0.5;
+        }
+
+        &:focus,
+        &:hover {
+            box-shadow: 0 0 8px 0 #0000007d;
+        }
+    }
+
+    #suggestions {
+        position: relative;
+        width: 100%;
+        max-width: 450px;
+        z-index: 10;
+        box-shadow: 0 0 8px 0 #0000007d;
+        cursor: pointer;
+
+        li:hover {
+            background-color: $mediumGrey;
+        }
+    }
+}

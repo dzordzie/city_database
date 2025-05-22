@@ -1,16 +1,22 @@
 @extends('layout.master')
 
 @section('content')
-<div>
-    <h1>{{ $city->name }}</h1>
-    <p>{{ $city->latitude }}</p>
-    <p>{{ $city->longitude }}</p>
-    <p>{{ $city->fax }}</p>
-    <p>{{ $city->email }}</p>
-    <p>{{ $city->mayor_name }}</p>
-    <p>{{ $city->city_hall_address }}</p>
-    <p>{{ $city->phone }}</p>
-    <p>{{ $city->web }}</p>
-    <img src="{{ asset($city->coat_of_arms_image) }}" alt="{{ $city->name }}">
+
+<div class="section-city-detail">
+    <div class="container d-flex flex-column align-items-center justify-content-center">
+        <table class="detail-table">
+            <tbody>
+                @foreach ($data as $key => $value)
+                    @if (!is_null($value) && $value !== '')
+                        <tr>
+                            <td class="fw-bold">{{ $key }}</td>
+                            <td>{{ $value }}</td>
+                        </tr>
+                    @endif
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 </div>
+
 @endsection
