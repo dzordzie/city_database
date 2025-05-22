@@ -23,6 +23,10 @@ class City extends Model
         'sub_district_id'
     ];
 
+    protected $casts = [
+        'emails' => 'array',
+    ];
+
     protected static function booted()
     {
         static::saving(function($city) {
