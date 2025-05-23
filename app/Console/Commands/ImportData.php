@@ -160,7 +160,7 @@ class ImportData extends Command
                 foreach ($cells[2]->find('a') as $a) {
                     $emails[] = trim($a->plaintext);
                 }
-                $data['email'] = json_encode($emails);
+                $data['email'] = $emails;
             }
 
             if (count($cells) >= 3 && trim($cells[1]->plaintext) === 'Web:') {
