@@ -17,7 +17,7 @@ class SearchController extends Controller
     {
         $query = Str::slug($request->get('query'), ' ');
 
-        $results = City::where('search_name', 'like', "%{$query}%")
+        $results = City::where('search_name', 'like', "{$query}%")
             ->orderBy('name')
             ->limit(5)
             ->get(['id', 'name']);
