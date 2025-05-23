@@ -7,7 +7,7 @@ $(function () {
         let query = $(this).val().toLowerCase();
         query = removeDiacratics(query);
 
-        if (query.length >= 2) {
+        if (query.length >= 1) {
             $.ajax({
                 url: "/search",
                 method: "GET",
